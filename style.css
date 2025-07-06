@@ -1,0 +1,660 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+body{
+    position: relative;
+    cursor: -webkit-grab;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.content{
+    margin: auto;
+    width: 1400px;
+    height: 1200px;
+    background-color: #100020;
+    position: relative;
+    background-image: url('images/space_.jpg');
+    background-size: cover;
+    transition: transform 0.8s ease-in-out;
+    transform-origin: center center;
+}
+.content:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.sun{
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ff0f00, #ff6f00, #ffff00);
+    box-shadow: 0px 0px 5px 2px #ffdf00, 0px 0px 7px 3px #ff6f00;
+    z-index: 10;
+
+    background-image: url("images/sun_.gif");
+    background-position-x: -318px;
+    background-position-y: -158px;
+    background-size: 245%;
+    cursor: pointer;
+}
+.sun>img{
+    border-radius: 100%;
+    height: 130px;
+    margin: auto;
+}
+
+.mercury_container{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    cursor: pointer;
+}
+.gif_mercury{
+    background-position-x: -15px;
+    background-position-y: -3px;
+    background-size: 239%;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-image: url("images/mercury_.gif");
+    border-radius: 100%;
+    overflow: hidden;
+}
+.shadow_mercury{
+    position: relative;
+    width: 22px;
+    height: 22px;
+}
+.shadow_mercury>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(255, 150, 100, 0.8),rgba(255, 255, 0, 0.0));
+}
+.shadow_mercury>.shadow{
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 1),rgba(255, 255, 0, 0.0));
+}
+
+.venus_container{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    cursor: pointer;
+}
+.gif_venus{
+    background-position-x: -4px;
+    background-position-y: -3px;
+    background-size: 120%;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url("images/venus_.gif");
+    border-radius: 100%;
+}
+.shadow_venus{
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+.shadow_venus>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(255, 150, 100, 0.8),rgba(255, 255, 0, 0.0));
+}
+.shadow_venus>.shadow{
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 1),rgba(255, 255, 0, 0.0));
+}
+
+.earth_moon_container{
+    position: absolute;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    cursor: pointer;
+}
+
+.earth_container{
+    align-self: center;
+    position: relative;
+    z-index: 10;
+}
+.gif_earth{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.gif_earth>img{
+    width: 40px;
+    height: 40px;
+}
+.shadow_earth{
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.shadow_earth>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+    left: 2px;
+    top: 1px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(255, 155, 200, 0.4), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
+}
+.shadow_earth>.shadow{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 1), rgba(0,0,0,0), rgba(0, 0, 0, 0.0));
+}
+
+.moon_container{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+.moon{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+.moon>img{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+}
+
+.mars_container{
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    cursor: pointer;
+}
+.gif_mars{
+    background-position-x: -5px;
+    background-position-y: -5px;
+    background-size: 125%;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background-image: url("images/mars_.gif");
+    border-radius: 100%;
+}
+.shadow_mars{
+    position: relative;
+    width: 38px;
+    height: 38px;
+}
+.shadow_mars>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(255, 150, 100, 0.8),rgba(255, 255, 0, 0.0));
+}
+.shadow_mars>.shadow{
+    content: "";
+    display: block;
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 1),rgba(255, 255, 0, 0.0));
+}
+
+.asteroid_belt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.asteroid {
+    position: absolute;
+    background-color: gray;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+.asteroid-small {
+    width: 2px;
+    height: 2px;
+}
+
+.asteroid-medium {
+    width: 3px;
+    height: 3px;
+}
+
+.asteroid-large {
+    width: 4px;
+    height: 4px;
+}
+
+.jupiter_container{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+.gif_jupiter{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.gif_jupiter>img{
+    width: 80px;
+    height: 80px;
+}
+.shadow_jupiter{
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.shadow_jupiter>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(255, 155, 100, 0.2),rgba(255, 255, 0, 0.0),rgba(255, 255, 0, 0.0));
+}
+.shadow_jupiter>.shadow{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8),rgba(255, 255, 0, 0.0));
+}
+
+.saturn_ring_container{
+    position: absolute;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    cursor: pointer;
+}
+
+.saturn_container{
+    align-self: center;
+    position: relative;
+    width: 55px;
+    height: 55px;
+    z-index: 10;
+}
+.gif_saturn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.gif_saturn:before{
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 100%;
+    background-color: rgba(255,175,100,0.4);
+    width: 100%;
+    height: 100%;
+}
+.gif_saturn>img{
+    width: 100%;
+    height: 100%;
+}
+.shadow_saturn{
+    position: relative;
+    width: 55px;
+    height: 55px;
+}
+.shadow_saturn>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 55px;
+    height: 55px;
+    left: 2px;
+    top: 1px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(255, 194, 87, 0.4) rgba(0, 0, 0, 0.0));
+}
+.shadow_saturn>.shadow{
+    content: "";
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0));
+}
+
+.ring_container{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+.gif_ring{
+    align-self: center;
+    width: 120px;
+    height: 60px;
+}
+.gif_ring>div{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.gif_ring>div:first-child>img{
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+}
+.gif_ring>div:last-child>img{
+    z-index: 11;
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    bottom: 0;
+}
+
+.uranus_container{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    cursor: pointer;
+}
+.gif_uranus{
+    background-position-x: -37px;
+    background-position-y: -7px;
+    background-size: 325%;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url("images/uranus_.gif");
+    border-radius: 100%;
+    overflow: hidden;
+}
+.shadow_uranus{
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+.shadow_uranus>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(255, 155, 0, 0.1),rgba(255, 255, 0, 0.0));
+}
+.shadow_uranus>.shadow{
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8),rgba(255, 255, 0, 0.0));
+}
+
+.neptune_container{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    cursor: pointer;
+}
+.gif_neptune{
+    background-position-x: -23px;
+    background-position-y: -4px;
+    background-size: 325%;
+    background-image: url("images/neptune_.gif");
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.shadow_neptune{
+    position: relative;
+    width: 22px;
+    height: 22px;
+}
+.shadow_neptune:before{
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    background-color: rgba(64, 64, 255, 0.1);
+    width: 22px;
+    height: 22px;	
+}
+.shadow_neptune>.light{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgba(150, 188, 253, 0.8),rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0));
+}
+.shadow_neptune>.shadow{
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.8),rgba(255, 255, 0, 0.0));
+}
+.circles>div{
+    position: absolute;
+    border-radius: 100%;
+    border: 2px solid rgba(55,205,255,0.2);
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+.planet{
+    border-radius: 100%;
+    position: absolute;
+}
+
+.controls{
+    position: fixed;
+    float: right;
+    padding: 20px;
+    bottom: 0;
+    z-index: 1000;
+}
+.controls>p{
+    display: inline-block;
+    margin: 20px;
+}
+
+button{
+    top: 0;
+    font-size: 25px;
+    padding: 10px 50px;
+    background-color: transparent;
+} 
+.content {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#start, #stop {
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Enhanced zoom and info panel styles */
+.zoomed {
+    transform: scale(3) !important;
+    z-index: 1000;
+}
+
+.planet-info {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    max-width: 350px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.planet-info.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.planet-info h2 {
+    color: #00ffff;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.planet-info .info-section {
+    margin-bottom: 15px;
+}
+
+.planet-info .info-label {
+    color: #ffaa00;
+    font-weight: bold;
+    display: inline-block;
+    width: 120px;
+}
+
+.planet-info .info-value {
+    color: #ffffff;
+}
+
+.planet-info .description {
+    margin-top: 15px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.close-info {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff4444;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-info:hover {
+    color: #ff0000;
+}
+
+.back-to-system {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: rgba(0, 255, 255, 0.2);
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-system.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-system:hover {
+    background: rgba(0, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.dimmed {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.highlight {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); }
+    50% { box-shadow: 0 0 30px rgba(255, 255, 0, 1); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); }
+}
